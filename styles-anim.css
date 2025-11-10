@@ -1,0 +1,458 @@
+/* ======================== 6. Feature Responsive Adjustments ======================== */
+
+/* --- A. Tablet View (992px and below) --- */
+@media (max-width: 992px) {
+    
+    /* Hero Section Layout Change (Stack elements vertically) */
+    .hero-section {
+        padding: 60px 30px;
+        min-height: auto; 
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Text Content Adjustments & Spacing for stacked elements */
+    .hero-text-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 60px; /* Space before the mobile image */
+    }
+    
+    .hero-text-content h1 {
+        font-size: 3em; 
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Mockup Adjustments */
+    .hero-image-mockup {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    
+    .mockup-placeholder {
+        transform: none; 
+        width: 280px;
+        height: 500px; 
+    }
+    
+    /* Feature Module Responsive */
+    .module-container {
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px 8px;
+    }
+    .sidebar {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .feature-list-nav {
+        flex-direction: row; 
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+    .feature-item {
+        white-space: nowrap;
+    }
+    .main-content-area {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    .description-panel, .image-carousel-section {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* --- B. Mobile View (768px and below) --- */
+@media (max-width: 768px) {
+    
+    /* Hero Section Mobile Content */
+    .hero-section {
+        padding: 40px 20px; 
+    }
+
+    .hero-text-content {
+        margin-bottom: 40px;
+    }
+    
+    .hero-text-content h1 {
+        font-size: 2rem; 
+    }
+    .simplified{
+        font-size: 2rem;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%; 
+        padding: 12px 0;
+    }
+
+    .features-list {
+        flex-direction: column; 
+        align-items: center;
+        gap: 5px;
+        font-size: 1em;
+        margin-top: 15px;
+    }
+    
+    /* Mockup Adjustments for Smallest Screens */
+    .mockup-placeholder {
+        width: 200px;
+        height: 380px;
+        border-width: 6px;
+    }
+
+    /* Footer Responsive */
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start; 
+        margin-bottom: 20px;
+    }
+    
+    .footer-brand {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-links-group {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* ======================== Contact card Styles ======================== */
+
+
+/* Optional: Fade transition for content */
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-primary-yellow); 
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-dark); 
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary-yellow); 
+    border-bottom: 2px solid var(--color-primary-yellow);
+    height: 30px; 
+}
+/* Mobile Toggle Button */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-text-dark);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ======================== 5. Footer Styles ======================== */
+/* ... [All previous CSS (Global, Navbar, Hero) goes here] ... */
+
+/* ======================== 4. Footer Styles (NEW) ======================== */
+
+.main-footer {
+    background-color: var(--color-footer); /* Very light gray/off-white background */
+    padding: 50px 50px 20px;
+    border-top: 1px solid var(--color-shadow-base);
+    color: var(--color-text-dark);
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-brand {
+    max-width: 250px;
+    margin-right: 40px;
+    margin-bottom: 20px; /* Space for mobile layout */
+}
+
+.footer-logo {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    /* Uses the existing yellow/green theme colors */
+}
+
+.footer-brand p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.footer-links-group {
+    min-width: 150px; /* Ensures columns don't get too narrow */
+    margin-bottom: 20px;
+}
+
+.footer-links-group h4 {
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Yellow accent line under the heading */
+.footer-links-group h4::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary-yellow); /* Yellow accent */
+    margin-top: 5px;
+}
+
+.footer-links-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-group ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links-group a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-size: 0.95em;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links-group a:hover {
+    color: var(--color-primary-yellow); /* Yellow hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--color-shadow-base);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85em;
+    color: var(--color-text-light);
+}
+
+/* ======================== 6. Nav Responsive Adjustments ======================== */
+
+/* --- A. Tablet View (992px and below) --- */
+@media (max-width: 992px) {
+    /* Navbar Padding */
+    .navbar {
+        padding: 15px 30px;
+    }
+    
+    /* Hero Section Layout Change (Stack elements vertically) */
+    .hero-section {
+        padding: 60px 30px;
+        min-height: auto; 
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Text Content Adjustments & Spacing for stacked elements */
+    .hero-text-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 60px; /* Space before the mobile image */
+    }
+    
+    .hero-text-content h1 {
+        font-size: 3em; 
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Mockup Adjustments */
+    .hero-image-mockup {
+        max-width: 100%;
+    }
+    
+    .mockup-placeholder {
+        transform: none; 
+        width: 280px;
+        height: 500px; 
+    }
+    
+    /* Feature Module Responsive */
+    .module-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .sidebar {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .feature-list-nav {
+        flex-direction: row; 
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+    .feature-item {
+        white-space: nowrap;
+    }
+    .main-content-area {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    .description-panel, .image-carousel-section {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* --- B. Mobile View (768px and below) --- */
+@media (max-width: 768px) {
+    /* Mobile Navigation (Menu Toggle) */
+    .nav-links {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        height: 0; 
+        flex-direction: column;
+        background-color: var(--color-background-light);
+        box-shadow: 0 4px 6px var(--color-shadow-base);
+        overflow: hidden;
+        transition: height 0.4s ease-in-out; 
+    }
+
+    .nav-links.active {
+        height: 180px; 
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px 30px; 
+    }
+
+    .menu-toggle {
+        display:block;
+    }
+    
+    /* Hero Section Mobile Content */
+    .hero-section {
+        padding: 40px 20px; 
+    }
+
+    .hero-text-content {
+        margin-bottom: 40px;
+    }
+    
+    .hero-text-content h1 {
+        font-size: 2rem; 
+    }
+    .simplified{
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%; 
+        padding: 12px 0;
+    }
+
+    .features-list {
+        flex-direction: column; 
+        align-items: center;
+        gap: 5px;
+        font-size: 1em;
+        margin-top: 15px;
+    }
+    
+    /* Mockup Adjustments for Smallest Screens */
+    .mockup-placeholder {
+        width: 200px;
+        height: 380px;
+        border-width: 6px;
+    }
+
+    /* Footer Responsive */
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start; 
+        margin-bottom: 20px;
+    }
+    
+    .footer-brand {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-links-group {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,478 @@
+/* Changes to made in Mobile Responsive Side */
+
+/* ================= About Section =====================*/
+
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .legacy-text {
+        max-width: 100%;
+        text-align: justify; 
+    }
+
+    .legacy-image-container {
+        width: 100%;
+        min-height: 250px;
+    }
+    
+    /* Remove slide-in animations on small screens for better performance/less distraction */
+    .animate-slide-in-left,
+    .animate-slide-in-right {
+        animation: fadeIn 0.7s ease-out 0.2s forwards !important; 
+        transform: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* ================= Download Section =====================*/
+
+@media (max-width: 600px) {
+    .download-title {
+        font-size: 2.5em;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 80%;
+        min-width: auto;
+    }
+
+    .feature-checklist {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .detection-box {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 768px) {
+
+    /* --- General Section Adjustments --- */
+    .download-section {
+        /* Reduce top padding for better screen usage */
+        padding: 50px 15px;
+        padding-top: 80px;
+        /* Allow height to be determined by content */
+        height: auto;
+        min-height: 50vh;
+        /* Increase background grid size for better visibility on small screens */
+        background-size: 20px 20px;
+    }
+
+    /* --- Title Scaling --- */
+    .download-title {
+        /* Scale down the title significantly for mobile screens */
+        font-size: 2.2em;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    /* --- Description Scaling --- */
+    .download-description {
+        /* Smaller font and reduced margin */
+        font-size: 1em;
+        margin-bottom: 30px;
+        text-align: justify;
+        padding: 0 10px; /* Slight horizontal padding */
+    }
+
+    /* --- Detection Box Stacking/Centering --- */
+    .detection-box {
+        /* Center the box itself */
+        display: flex;
+        /* Allow text content to wrap */
+        flex-wrap: wrap; 
+        /* Ensure the box takes up a good width, but maintains padding */
+        width: calc(100% - 30px); /* 100% minus the left/right padding of 15px */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 15px; /* Adjust padding */
+        text-align: center;
+    }
+    
+    .warning-icon {
+        /* Center icon above text on mobile if needed, or keep it left-aligned */
+        margin-right: 10px;
+    }
+
+
+    /* --- Buttons Stacking (Crucial Change) --- */
+    .download-buttons {
+        /* Change from row (flex) to column (flex-direction: column) */
+        flex-direction: column;
+        align-items: center; /* Center buttons horizontally */
+        gap: 15px; /* Reduce gap between stacked buttons */
+        margin-bottom: 30px;
+    }
+
+    /* --- Button Width Adjustment --- */
+    .btn {
+        /* Set a consistent, narrower width for stacked buttons */
+        width: 90%; /* Take up most of the screen width */
+        min-width: unset; /* Remove the large min-width constraint */
+        max-width: 300px;
+        padding: 12px 20px; /* Slightly smaller padding */
+        font-size: 1em;
+    }
+}
+
+/* ==================== FAQ Section ======================*/
+
+@media (max-width: 768px) {
+    .faq-section h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+    }
+}
+
+/* ====================== Contact Section =====================*/
+
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .submit-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* ======================= Feature Section =====================*/
+
+@media (max-width: 768px) {
+    
+    /* 1. Change main container to stack items vertically (column layout) */
+    .module-container {
+        flex-direction: column;
+        margin: 0 ; /* Remove side margins for full width */
+        max-width: 100%;
+        min-height: auto; /* Allow height to adjust to content */
+        border-radius: 0; /* Optional: Remove border radius on full-screen mobile view */
+        box-shadow: none; /* Optional: Remove box shadow on full-screen mobile view */
+    }
+
+    /* 2. Style the Sidebar to take full width and remove corner radius */
+    .sidebar {
+        width: 100%;
+        padding-bottom: 10px; /* Slightly less vertical padding */
+        border-radius: 0;
+        /* Optional: Center the title and navigation links */
+        text-align: center;
+    }
+    
+    .sidebar-title {
+        padding: 0 15px 10px;
+        border-bottom: none; /* Optional: Remove the divider */
+        margin-bottom: 5px;
+        font-size: 1.5em; /* Make the title a bit bigger */
+    }
+
+    /* Adjust list item layout if needed (e.g., center text) */
+    .feature-list-nav {
+        flex-direction: row; /* Make navigation links horizontal */
+        overflow-x: auto; /* Allows scrolling if many links */
+        padding: 0 10px;
+        justify-content: space-between; /* Space them out */
+    }
+
+    .feature-item {
+        padding: 8px 10px; /* Adjust padding for smaller horizontal space */
+        font-size: 0.9em;
+        line-height: 1.2;
+        flex-shrink: 0; /* Prevent items from shrinking */
+    }
+    
+    .feature-item i {
+        display: none; /* Hide icons to save space, or keep them if preferred */
+    }
+
+    .feature-hero h2{
+        font-size: 1.5rem;
+    }
+    .feature-hero-content{
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .feature-hero .quote::before,
+    .feature-hero .quote::after {
+        font-size: 1.5em; /* Further reduce the size of the quotation marks */
+    }
+    .feature-hero .quote::before{
+        left: 8%;
+
+    }
+    
+    /* Active and Hover states can stay as they are or be adjusted */
+    .feature-item.active {
+        box-shadow: 0 2px 5px var(--color-shadow-base);
+        border-radius: 10px;
+    }
+
+
+    /* 3. Main Content Area adjustments */
+    .main-content-area {
+        flex-direction: column-reverse; /* Important: Puts the image/carousel *before* the description on mobile */
+        width: auto;
+        padding: 20px; /* Reduced padding for smaller screens */
+        gap: 20px;
+    }
+
+    /* 4. Description Panel takes full width */
+    .description-panel {
+        width: 100%;
+        padding-left: 0;
+        font-size: 1rem;
+    }
+    
+    #feature-title {
+        font-size: 1.8em;
+    }
+
+    /* 5. Image Carousel/Phone Frame adjustments */
+    .image-carousel-section {
+        padding-left: 0;
+        width: 100%; /* Take full width */
+    }
+    
+    .image-display-frame {
+        width: 250px; /* Make phone frame smaller for mobile */
+        height: 480px;
+        border-width: 5px; /* Thinner border */
+        border-radius: 20px;
+        box-shadow: 0 5px 10px var(--color-text-dark);
+    }
+    .right-arrow{
+        margin: 0;
+        padding: 3px;
+    }
+    .left-arrow{
+        margin: 0;
+        padding: 3px;
+    }
+    
+    /* Hide arrows on mobile if they clutter the view */
+    .carousel-arrow {
+        font-size: 1.2em;
+    }
+    
+    /* Adjustments for the list (p and ul) for better mobile readability */
+    .module-container ul {
+        line-height: 2; /* Reduce line height slightly */
+    }
+
+    .module-container p {
+        line-height: 1.6;
+        font-weight: normal; /* Less bold on mobile for better reading */
+    }
+}
+
+/* Additional Feature Section */
+
+@media (max-width: 768px) {
+
+    /* --- Landscape Container Adjustments --- */
+    .landscape-container {
+        /* Change the primary direction from row (side-by-side) to column (stacking) */
+        flex-direction: column;
+        /* Remove fixed height to allow content to dictate overall height */
+        height: auto; 
+        max-width: 100%;
+        /* Add internal padding for breathing room */
+        padding: 20px 15px;
+    }
+
+    /* --- Content Section Adjustments (Title/Description) --- */
+    .content-section {
+        /* Reset flex allocation since it's now a single column */
+        flex: 1; 
+        /* Add padding and center alignment for better mobile presentation */
+        padding: 30px 0;
+        text-align: center;
+        /* Remove the desktop separator line */
+        border-right: none; 
+    }
+
+    .main-title {
+        /* Increase font size slightly for impact on smaller screens */
+        font-size: 2em; 
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    /* --- Mobile Frames Section Adjustments --- */
+    .mobile-frames-section {
+        /* Reset flex allocation */
+        flex: 1; 
+        /* Add some space above the frames when stacked */
+        padding: 30px 0; 
+        /* Allows frames to wrap if necessary, though not strictly needed here */
+        flex-wrap: wrap; 
+    }
+
+    /* --- Mobile Frame Styling Adjustments --- */
+    .mobile-frame {
+        /* Reduce the size of the phones to fit comfortably side-by-side (if multiple) */
+        width: 150px; 
+        height: 320px; 
+        border-radius: 20px;
+        /* Adjust margin to reduce overlap and ensure they fit */
+        margin-left: -30px; 
+        /* Reduce border width */
+        border: 5px solid var(--color-text-dark); 
+    }
+
+    .mobile-frame:first-child {
+        /* Reset margin for the first frame */
+        margin-left: 0; 
+    }
+}
+
+/* ======================================Nav Section================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Navbar Adjustments */
+    .navbar {
+        padding: 15px 20px; /* Reduced side padding for smaller screens */
+        height: 50px; /* Slightly reduced height */
+        box-shadow: 0 1px 3px var(--color-shadow-base);
+    }
+    
+    /* 2. Logo Section Adjustments */
+    .logo-section {
+        height: 50px; /* Match new navbar height */
+        padding-top: 10px; /* Adjusted padding to center in new height */
+        width: auto; /* Allow width to be determined by content */
+    }
+
+    .logo-text {
+        font-size: 1.5em; /* Slightly smaller logo text */
+    }
+    
+    .logo-img {
+        height: 25px; /* Slightly smaller logo image */
+        width: 25px;
+    }
+    .logo-link{
+        padding-left: 2px;
+    }
+
+
+    /* 3. Hide Navigation Links (Desktop Menu) and Style Mobile Menu */
+    .nav-links {
+        /* This is the key change: Move links off-screen by default */
+        position: fixed;
+        top: 50px; /* Should start right below the navbar */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 50px); /* Full viewport height minus navbar height */
+        flex-direction: column; /* Stack links vertically */
+        background-color: var(--color-background-light); /* Menu background */
+        padding: 40px 0;
+        align-items: center;
+        /* Start the menu off-screen */
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 999; /* Below the toggle button, above everything else */
+    }
+
+    /* Style for links within the mobile menu */
+    .nav-links a {
+        font-size: 1.3em;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a:hover {
+        border-bottom: none; /* Remove desktop hover style */
+        background-color: var(--color-shadow-base); /* New mobile hover style */
+    }
+
+
+    /* 4. Show the Menu Toggle Button */
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+        padding-right: 4px;
+    }
+
+
+    /* 5. JavaScript Class for Open/Active Menu State */
+    /* NOTE: You will need JavaScript to toggle the 'nav-active' class on the .nav-links when .menu-toggle is clicked */
+    .nav-links.nav-active {
+        transform: translateX(0); /* Slide menu into view */
+    }
+
+    /* Optional: Hamburger Icon Animation when Active (X shape) */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar */
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
